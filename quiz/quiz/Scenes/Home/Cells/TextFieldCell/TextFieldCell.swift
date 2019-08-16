@@ -18,8 +18,9 @@ class TextFieldCell: UITableViewCell {
     
     weak var delegate: TextFieldCellDelegate?
     
-    func configure(question: String, clearText: Bool, delegate: TextFieldCellDelegate) {
+    func configure(question: String, clearText: Bool, isEnabled: Bool, delegate: TextFieldCellDelegate) {
         self.delegate = delegate
+        textField.isEnabled = isEnabled
         questionTitle.text = question
         if clearText { textField.text = "" }
         textField.layer.sublayerTransform = CATransform3DMakeTranslation(15, 0, 0);

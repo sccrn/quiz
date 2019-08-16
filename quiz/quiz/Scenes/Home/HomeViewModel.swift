@@ -28,6 +28,7 @@ class HomeViewModel {
     private var tableViewList: [HomeTVCell] = []
     private var allWords: [String] = []
     
+    var isEnabled: Bool = false
     var clearText: Bool = false
     var question: String = ""
     weak var delegate: HomeDelegate?
@@ -52,7 +53,7 @@ class HomeViewModel {
     }
     
     func insertWord(word: String) {
-        if allWords.contains(word) {
+        if allWords.contains(word) && !insertedWords.contains(word) {
             clearText = true
             insertedWords.append(word)
             updateTableView()
@@ -63,10 +64,16 @@ class HomeViewModel {
     func getResult() -> String {
         return "\(Constants.Messages.timeFiniMessageOne)\(insertedWords.count)\(Constants.Messages.timeFiniMessageTwo)"
     }
+    
+    func restartQuiz() {
+        isEnabled = false
+        insertedWords = []
+        updateTableView()
+    }
 }
 
 extension HomeViewModel {
-    func updateTableView() {
+    private func updateTableView() {
         tableViewList.removeAll()
         tableViewList.append(.textField)
         tableViewList.append(contentsOf: repeatElement(.word, count: insertedWords.count))
@@ -78,5 +85,9 @@ extension HomeViewModel {
     
     func typeOfCell(for row: Int) -> HomeTVCell {
         return tableViewList[row]
+    }
+    
+    func getWordInArray(for row: Int) -> String {
+        return insertedWords[row]
     }
 }

@@ -26,10 +26,13 @@ extension HomeDataSource: UITableViewDelegate, UITableViewDataSource {
         switch viewModel.typeOfCell(for: indexPath.row) {
         case .textField:
             let cell = tableView.dequeue(cellClass: TextFieldCell.self, indexPath: indexPath)
-            cell.configure(question: viewModel.question, clearText: viewModel.clearText, delegate: self)
+            cell.configure(question: viewModel.question,
+                           clearText: viewModel.clearText,
+                           isEnabled: viewModel.isEnabled, delegate: self)
             return cell
         case .word:
             let cell = tableView.dequeue(cellClass: WordCell.self, indexPath: indexPath)
+            cell.configure(word: viewModel.getWordInArray(for: indexPath.row - 1))
             return cell
         }
     }

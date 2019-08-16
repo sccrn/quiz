@@ -11,6 +11,7 @@ import UIKit
 
 enum ControlViewState {
     case allWords
+    case textState(enable: Bool)
     case endTimer
 }
 
@@ -31,11 +32,13 @@ class ControlView: UIView, NibLoadable {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.addTopBorder()
         setupFromNib()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        self.addTopBorder()
         setupFromNib()
     }
     
@@ -66,7 +69,8 @@ class ControlView: UIView, NibLoadable {
     
     private func startCountDown() {
         if !isTimerRunning {
-           timer = Timer.scheduledTimer(timeInterval: 1, target: self,
+            delegate?.didChange(with: .textState(enable: true))
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self,
                                                 selector: #selector(updateCountDown),
                                                 userInfo: nil, repeats: true)
             isTimerRunning = true
@@ -74,6 +78,7 @@ class ControlView: UIView, NibLoadable {
     }
     
     private func resetCountDown() {
+        delegate?.didChange(with: .textState(enable: false))
         timer?.invalidate()
         seconds = 300
         timerLabel.text = formatterTimer(time: TimeInterval(seconds))

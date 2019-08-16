@@ -9,5 +9,10 @@
 import UIKit
 
 class WordCell: UITableViewCell {
+    @IBOutlet weak var wordLabel: UILabel!
     
+    func configure(word: String) {
+        wordLabel.text = word
+        self.addBottomBorder(margins: 16)
+    }
 }
