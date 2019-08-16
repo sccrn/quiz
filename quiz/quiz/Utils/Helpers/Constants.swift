@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+struct Constants {
+    struct Service {
+        static let baseURL = "https://codechallenge.arctouch.com/quiz/"
+        static let javaWords = "java-keywords"
+        
+        static let acceptType = "Accept"
+        static let contentType = "Content-Type"
+        static let json = "application/json"
+    }
+}

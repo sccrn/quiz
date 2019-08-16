@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+struct QuizModel: Codable {
+    let question: String
+    let answer: [String]
+}
