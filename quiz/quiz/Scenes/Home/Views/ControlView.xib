@@ -25,6 +25,7 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dkq-IH-kRw">
                     <rect key="frame" x="16" y="73" width="382" height="50"/>
                     <color key="backgroundColor" red="1" green="0.51465082168579102" blue="0.0015337103977799416" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <accessibility key="accessibilityConfiguration" identifier="startResetButton"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="IDm-x8-1Em"/>
                     </constraints>
@@ -43,12 +44,14 @@
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00/50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sko-Av-3LV">
                     <rect key="frame" x="16" y="16" width="103.5" height="41"/>
+                    <accessibility key="accessibilityConfiguration" identifier="hits"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Jb-HH-gv0">
                     <rect key="frame" x="298.5" y="16" width="99.5" height="41"/>
+                    <accessibility key="accessibilityConfiguration" identifier="timer"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>

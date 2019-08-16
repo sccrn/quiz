@@ -31,6 +31,9 @@
                     <constraint firstItem="NEd-yu-2D5" firstAttribute="leading" secondItem="M1j-te-GSY" secondAttribute="leading" constant="20" id="yxh-TG-FeP"/>
                 </constraints>
             </tableViewCellContentView>
+            <accessibility key="accessibilityConfiguration" identifier="wordCell">
+                <bool key="isElement" value="YES"/>
+            </accessibility>
             <connections>
                 <outlet property="wordLabel" destination="NEd-yu-2D5" id="iFF-AT-akD"/>
             </connections>

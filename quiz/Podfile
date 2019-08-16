@@ -12,12 +12,14 @@ target 'quiz' do
      pod 'Alamofire', '5.0.0-beta.3'
 
   target 'quizTests' do
+   use_frameworks!
     inherit! :search_paths
     # Pods for testing
   end
 
   target 'quizUITests' do
-    inherit! :search_paths
+   use_frameworks!
+
     # Pods for testing
   end
 
