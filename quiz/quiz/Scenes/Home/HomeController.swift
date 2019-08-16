@@ -70,7 +70,7 @@ class HomeController: BaseController {
         let actionTitle = isSuccess ? Constants.Titles.playAgain : Constants.Titles.tryAgain
         alert.addAction(UIAlertAction(title: actionTitle, style: .default, handler: { (_) in
             self.controlView.configureLayout()
-            self.viewModel.restartQuiz()
+            self.viewModel.restartQuiz(enable: false)
             self.tableView.reloadData()
         }))
         present(alert, animated: true)
@@ -99,7 +99,7 @@ extension HomeController: ControlViewDelegate {
         case .allWords:
             showAlert(message: Constants.Messages.congratsMessage, isSuccess: true)
         case .textState(let enable):
-            viewModel.isEnabled = enable
+            viewModel.restartQuiz(enable: enable)
             tableView.reloadData()
         case .endTimer:
             let message = viewModel.getResult()

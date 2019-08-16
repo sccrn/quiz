@@ -65,8 +65,8 @@ class HomeViewModel {
         return "\(Constants.Messages.timeFiniMessageOne)\(insertedWords.count)\(Constants.Messages.timeFiniMessageTwo)"
     }
     
-    func restartQuiz() {
-        isEnabled = false
+    func restartQuiz(enable: Bool) {
+        isEnabled = enable
         insertedWords = []
         updateTableView()
     }

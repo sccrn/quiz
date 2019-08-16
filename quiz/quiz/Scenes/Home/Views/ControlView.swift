@@ -42,13 +42,15 @@ class ControlView: UIView, NibLoadable {
     
     func configureLayout() {
         startResetButton.setTitle(Constants.Titles.start, for: .normal)
+        numberOfHits.text = "00/50"
         seconds = 300
         timerLabel.text = formatterTimer(time: TimeInterval(seconds))
         isTimerRunning = false
     }
     
     func insertNewWord(count: Int) {
-        numberOfHits.text = "\(count)/50"
+        let hits = count < 10 ? "0\(count)/50" : "\(count)/50"
+        numberOfHits.text = hits
         if count == 50 {
             delegate?.didChange(with: .allWords)
             timer?.invalidate()
@@ -81,6 +83,7 @@ class ControlView: UIView, NibLoadable {
         seconds = 300
         timerLabel.text = formatterTimer(time: TimeInterval(seconds))
         isTimerRunning = false
+        numberOfHits.text = "00/50"
     }
     
     @objc private func updateCountDown() {
