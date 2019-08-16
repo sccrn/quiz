@@ -1,0 +1,23 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'quiz' do
+  use_frameworks!
+
+  # Pods for layout
+     pod 'SVProgressHUD', '2.2.5'
+   
+  # Pods for service
+     pod 'Alamofire', '5.0.0-beta.3'
+
+  target 'quizTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'quizUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
