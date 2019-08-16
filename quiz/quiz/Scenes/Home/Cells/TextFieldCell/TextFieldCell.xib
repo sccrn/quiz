@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="TextFieldCell" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="130" id="RrS-02-BjE" customClass="TextFieldCell" customModule="quiz" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RrS-02-BjE" id="i90-o9-4uo">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="129.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Insert Word" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YMw-ND-yh1">
+                        <rect key="frame" x="16" y="72" width="382" height="45"/>
+                        <color key="backgroundColor" red="0.92146831750869751" green="0.92162626981735229" blue="0.92145836353302002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="wQ8-bX-Q3L"/>
+                        </constraints>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </textField>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MWd-RA-77b">
+                        <rect key="frame" x="16" y="11" width="382" height="41"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="MWd-RA-77b" secondAttribute="trailing" constant="16" id="CKP-wV-IgV"/>
+                    <constraint firstAttribute="bottom" secondItem="YMw-ND-yh1" secondAttribute="bottom" constant="12.5" id="CVD-VM-H3B"/>
+                    <constraint firstItem="MWd-RA-77b" firstAttribute="leading" secondItem="i90-o9-4uo" secondAttribute="leading" constant="16" id="Cec-Ll-Ns6"/>
+                    <constraint firstItem="MWd-RA-77b" firstAttribute="top" secondItem="i90-o9-4uo" secondAttribute="top" constant="11" id="IGP-CY-cX0"/>
+                    <constraint firstItem="YMw-ND-yh1" firstAttribute="leading" secondItem="i90-o9-4uo" secondAttribute="leading" constant="16" id="P8j-MC-ge3"/>
+                    <constraint firstAttribute="trailing" secondItem="YMw-ND-yh1" secondAttribute="trailing" constant="16" id="XJB-sh-Q0w"/>
+                    <constraint firstItem="YMw-ND-yh1" firstAttribute="top" secondItem="MWd-RA-77b" secondAttribute="bottom" constant="20" id="q0D-Qs-4Bo"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="questionTitle" destination="MWd-RA-77b" id="rum-vp-87F"/>
+                <outlet property="textField" destination="YMw-ND-yh1" id="PbA-eV-0HD"/>
+            </connections>
+            <point key="canvasLocation" x="66.666666666666671" y="-2.0089285714285712"/>
+        </tableViewCell>
+    </objects>
+</document>

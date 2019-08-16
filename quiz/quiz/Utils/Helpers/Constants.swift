@@ -17,4 +17,9 @@ struct Constants {
         static let contentType = "Content-Type"
         static let json = "application/json"
     }
+    
+    struct Titles {
+        static let reset = "Reset"
+        static let start = "Start"
+    }
 }

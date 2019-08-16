@@ -10,6 +10,7 @@ import UIKit
 
 class HomeController: BaseController {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var controlViewHeight: NSLayoutConstraint!
     
     private var viewModel: HomeViewModel
     private var tableViewDataSource: HomeDataSource?
@@ -24,7 +25,16 @@ class HomeController: BaseController {
     }
     
     override func viewDidLoad() {
+        loadLayout()
         setupTableView()
+    }
+
+    private func loadLayout() {
+        
+        navigationController?.setNavigationBarHidden(true, animated: false)
+        viewModel.delegate = self
+        showLoading()
+        viewModel.fetchQuiz()
     }
     
     private func setupTableView() {
@@ -32,5 +42,18 @@ class HomeController: BaseController {
         tableViewDataSource = HomeDataSource(viewModel: viewModel)
         tableView.dataSource = tableViewDataSource
         tableView.delegate = tableViewDataSource
+    }
+}
+
+extension HomeController: HomeDelegate {
+    func didEndAction(with state: HomeState) {
+        switch state {
+        case .success:
+            stopLoading()
+            tableView.reloadData()
+        case .failed(let error):
+            stopLoading()
+            showError(message: error)
+        }
     }
 }

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		3C03FC05D529563CE23D6B40 /* Pods_quiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0F2DDC9C8AF06A7BE5545BB /* Pods_quiz.framework */; };
 		40ED5C6A294F006C5617DECD /* Pods_quizTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69500A796847A9A66188FEED /* Pods_quizTests.framework */; };
+		5D4E5DBA23069FD100863511 /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4E5DB923069FD100863511 /* ControlView.swift */; };
+		5D4E5DBC23069FDC00863511 /* ControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D4E5DBB23069FDC00863511 /* ControlView.xib */; };
+		5D4E5DBE2306A51600863511 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4E5DBD2306A51600863511 /* NibLoadable.swift */; };
 		5DA170562306721C007C8D92 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA170552306721C007C8D92 /* HomeController.swift */; };
 		5DA170582306722D007C8D92 /* HomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DA170572306722D007C8D92 /* HomeController.xib */; };
 		5DA1705A23067240007C8D92 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA1705923067240007C8D92 /* HomeViewModel.swift */; };
@@ -18,6 +21,11 @@
 		5DA17063230677AD007C8D92 /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA17062230677AD007C8D92 /* HomeManager.swift */; };
 		5DA1706623067B56007C8D92 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA1706523067B56007C8D92 /* AppCoordinator.swift */; };
 		5DA1706923067C11007C8D92 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA1706823067C11007C8D92 /* HomeCoordinator.swift */; };
+		5DA1706F23068BFE007C8D92 /* WordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA1706E23068BFE007C8D92 /* WordCell.swift */; };
+		5DA1707123068C07007C8D92 /* WordCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DA1707023068C07007C8D92 /* WordCell.xib */; };
+		5DA1707423068C27007C8D92 /* TextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DA1707323068C27007C8D92 /* TextFieldCell.xib */; };
+		5DA1707623068C2F007C8D92 /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA1707523068C2F007C8D92 /* TextFieldCell.swift */; };
+		5DA17078230695C0007C8D92 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA17077230695C0007C8D92 /* UIView.swift */; };
 		5DC870842306544700E14FAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC870832306544700E14FAB /* AppDelegate.swift */; };
 		5DC8708B2306544800E14FAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DC8708A2306544800E14FAB /* Assets.xcassets */; };
 		5DC8708E2306544800E14FAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DC8708C2306544800E14FAB /* LaunchScreen.storyboard */; };
@@ -51,6 +59,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5D4E5DB923069FD100863511 /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
+		5D4E5DBB23069FDC00863511 /* ControlView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ControlView.xib; sourceTree = "<group>"; };
+		5D4E5DBD2306A51600863511 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		5DA170552306721C007C8D92 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		5DA170572306722D007C8D92 /* HomeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeController.xib; sourceTree = "<group>"; };
 		5DA1705923067240007C8D92 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -60,6 +71,11 @@
 		5DA17062230677AD007C8D92 /* HomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeManager.swift; sourceTree = "<group>"; };
 		5DA1706523067B56007C8D92 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		5DA1706823067C11007C8D92 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		5DA1706E23068BFE007C8D92 /* WordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCell.swift; sourceTree = "<group>"; };
+		5DA1707023068C07007C8D92 /* WordCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordCell.xib; sourceTree = "<group>"; };
+		5DA1707323068C27007C8D92 /* TextFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldCell.xib; sourceTree = "<group>"; };
+		5DA1707523068C2F007C8D92 /* TextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
+		5DA17077230695C0007C8D92 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		5DC870802306544700E14FAB /* quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DC870832306544700E14FAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DC8708A2306544800E14FAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -143,6 +159,8 @@
 		5DA1705423067205007C8D92 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				5DA1707A23069F5F007C8D92 /* Views */,
+				5DA1706C23068BD4007C8D92 /* Cells */,
 				5DA170572306722D007C8D92 /* HomeController.xib */,
 				5DA170552306721C007C8D92 /* HomeController.swift */,
 				5DA1705F2306757F007C8D92 /* HomeDataSource.swift */,
@@ -165,6 +183,49 @@
 				5DA1706823067C11007C8D92 /* HomeCoordinator.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		5DA1706C23068BD4007C8D92 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5DA1707223068C0F007C8D92 /* TextFieldCell */,
+				5DA1706D23068BDE007C8D92 /* WordCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		5DA1706D23068BDE007C8D92 /* WordCell */ = {
+			isa = PBXGroup;
+			children = (
+				5DA1707023068C07007C8D92 /* WordCell.xib */,
+				5DA1706E23068BFE007C8D92 /* WordCell.swift */,
+			);
+			path = WordCell;
+			sourceTree = "<group>";
+		};
+		5DA1707223068C0F007C8D92 /* TextFieldCell */ = {
+			isa = PBXGroup;
+			children = (
+				5DA1707323068C27007C8D92 /* TextFieldCell.xib */,
+				5DA1707523068C2F007C8D92 /* TextFieldCell.swift */,
+			);
+			path = TextFieldCell;
+			sourceTree = "<group>";
+		};
+		5DA17079230696B4007C8D92 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		5DA1707A23069F5F007C8D92 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5D4E5DBB23069FDC00863511 /* ControlView.xib */,
+				5D4E5DB923069FD100863511 /* ControlView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		5DC870772306544600E14FAB = {
@@ -224,6 +285,7 @@
 		5DC870B12306548500E14FAB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5DA17079230696B4007C8D92 /* Fonts */,
 				5DC870B4230654B600E14FAB /* Storyboards */,
 				5DC870B22306549000E14FAB /* Images */,
 			);
@@ -267,6 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				5DC870B72306551C00E14FAB /* Constants.swift */,
+				5D4E5DBD2306A51600863511 /* NibLoadable.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -285,6 +348,7 @@
 				5DC870BC2306554400E14FAB /* UIColor.swift */,
 				5DA1705B2306726F007C8D92 /* UITableView.swift */,
 				5DA1705D23067280007C8D92 /* UITableViewCell.swift */,
+				5DA17077230695C0007C8D92 /* UIView.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -452,7 +516,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DC8708E2306544800E14FAB /* LaunchScreen.storyboard in Resources */,
+				5DA1707123068C07007C8D92 /* WordCell.xib in Resources */,
+				5DA1707423068C27007C8D92 /* TextFieldCell.xib in Resources */,
 				5DA170582306722D007C8D92 /* HomeController.xib in Resources */,
+				5D4E5DBC23069FDC00863511 /* ControlView.xib in Resources */,
 				5DC8708B2306544800E14FAB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -564,15 +631,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DA17078230695C0007C8D92 /* UIView.swift in Sources */,
 				5DC870CE230658E700E14FAB /* Coordinator.swift in Sources */,
 				5DC870C22306559400E14FAB /* APIManager.swift in Sources */,
 				5DA17063230677AD007C8D92 /* HomeManager.swift in Sources */,
+				5D4E5DBA23069FD100863511 /* ControlView.swift in Sources */,
+				5DA1706F23068BFE007C8D92 /* WordCell.swift in Sources */,
 				5DC870842306544700E14FAB /* AppDelegate.swift in Sources */,
 				5DA1705A23067240007C8D92 /* HomeViewModel.swift in Sources */,
 				5DC870CB2306563100E14FAB /* BaseController.swift in Sources */,
+				5D4E5DBE2306A51600863511 /* NibLoadable.swift in Sources */,
 				5DC870C7230655FC00E14FAB /* QuizModel.swift in Sources */,
 				5DA170562306721C007C8D92 /* HomeController.swift in Sources */,
 				5DA1705C2306726F007C8D92 /* UITableView.swift in Sources */,
+				5DA1707623068C2F007C8D92 /* TextFieldCell.swift in Sources */,
 				5DC870BD2306554400E14FAB /* UIColor.swift in Sources */,
 				5DA1705E23067280007C8D92 /* UITableViewCell.swift in Sources */,
 				5DC870B82306551C00E14FAB /* Constants.swift in Sources */,

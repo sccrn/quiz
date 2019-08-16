@@ -19,16 +19,25 @@ class HomeDataSource: NSObject {
 
 extension HomeDataSource: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return viewModel.numberOfRows()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        switch viewModel.typeOfCell(for: indexPath.row) {
+        case .textField:
+            let cell = tableView.dequeue(cellClass: TextFieldCell.self, indexPath: indexPath)
+            cell.configure(question: viewModel.question)
+            return cell
+        case .word:
+            let cell = tableView.dequeue(cellClass: WordCell.self, indexPath: indexPath)
+            return cell
+        }
     }
 }
 
 extension HomeDataSource {
     class func setupHomeTableView(tableView: UITableView?) {
-        
+        tableView?.registerNib(cellClass: TextFieldCell.self)
+        tableView?.registerNib(cellClass: WordCell.self)
     }
 }

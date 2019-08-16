@@ -14,8 +14,11 @@ class HomeCoordinator: Coordinator {
     var rootViewController: UIViewController { return navigationController }
     
     private lazy var navigationController: UINavigationController = {
-        let navigationControoler = UINavigationController()
-        return navigationControoler
+        let navigationC = UINavigationController()
+        navigationC.navigationBar.barTintColor = .white
+        navigationC.navigationBar.shadowImage = UIImage()
+        navigationC.navigationBar.isTranslucent = false
+        return navigationC
     }()
     
     func start() {
