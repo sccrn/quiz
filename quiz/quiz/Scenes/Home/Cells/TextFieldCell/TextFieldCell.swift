@@ -20,6 +20,7 @@ class TextFieldCell: UITableViewCell {
     
     func configure(question: String, clearText: Bool, isEnabled: Bool, delegate: TextFieldCellDelegate) {
         self.delegate = delegate
+        textField.becomeFirstResponder()
         textField.isEnabled = isEnabled
         questionTitle.text = question
         if clearText { textField.text = "" }

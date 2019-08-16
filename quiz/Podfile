@@ -6,6 +6,7 @@ target 'quiz' do
 
   # Pods for layout
      pod 'SVProgressHUD', '2.2.5'
+     pod 'IQKeyboardManagerSwift', '6.4.1'
    
   # Pods for service
      pod 'Alamofire', '5.0.0-beta.3'

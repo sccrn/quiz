@@ -10,9 +10,14 @@ import UIKit
 
 class HomeController: BaseController {
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var controlView: ControlView!
     
-    
+    private lazy var controlView: ControlView = {
+        let rect = CGRect(x: 0, y: self.view.frame.height - 140,
+                          width: self.view.frame.width, height: 139)
+        let control = ControlView(frame: rect)
+        control.translatesAutoresizingMaskIntoConstraints = false
+        return control
+    }()
     private var viewModel: HomeViewModel
     private var tableViewDataSource: HomeDataSource?
     
@@ -27,15 +32,28 @@ class HomeController: BaseController {
     
     override func viewDidLoad() {
         loadLayout()
+        setupControlView()
         setupTableView()
     }
 
     private func loadLayout() {
-        controlView.delegate = self
         navigationController?.setNavigationBarHidden(true, animated: false)
         viewModel.delegate = self
         showLoading()
         viewModel.fetchQuiz()
+    }
+    
+    private func setupControlView() {
+        controlView.addTopBorder()
+        controlView.delegate = self
+        self.view.addSubview(controlView)
+        controlView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
+        controlView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        if #available(iOS 11.0, *) {
+            controlView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        } else {
+            controlView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        }
     }
     
     private func setupTableView() {

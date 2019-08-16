@@ -12,6 +12,7 @@
 		5D4E5DBA23069FD100863511 /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4E5DB923069FD100863511 /* ControlView.swift */; };
 		5D4E5DBC23069FDC00863511 /* ControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5D4E5DBB23069FDC00863511 /* ControlView.xib */; };
 		5D4E5DBE2306A51600863511 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4E5DBD2306A51600863511 /* NibLoadable.swift */; };
+		5D7FB92C230760490041F7AD /* QZGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7FB92B230760490041F7AD /* QZGradient.swift */; };
 		5DA170562306721C007C8D92 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA170552306721C007C8D92 /* HomeController.swift */; };
 		5DA170582306722D007C8D92 /* HomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DA170572306722D007C8D92 /* HomeController.xib */; };
 		5DA1705A23067240007C8D92 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA1705923067240007C8D92 /* HomeViewModel.swift */; };
@@ -62,6 +63,7 @@
 		5D4E5DB923069FD100863511 /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
 		5D4E5DBB23069FDC00863511 /* ControlView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ControlView.xib; sourceTree = "<group>"; };
 		5D4E5DBD2306A51600863511 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		5D7FB92B230760490041F7AD /* QZGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QZGradient.swift; sourceTree = "<group>"; };
 		5DA170552306721C007C8D92 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		5DA170572306722D007C8D92 /* HomeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeController.xib; sourceTree = "<group>"; };
 		5DA1705923067240007C8D92 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -154,6 +156,14 @@
 				702F0BE6FDC20C203C16A60A /* Pods-quizUITests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		5D1DE2432307601A00E6BC8E /* QZViews */ = {
+			isa = PBXGroup;
+			children = (
+				5D7FB92B230760490041F7AD /* QZGradient.swift */,
+			);
+			path = QZViews;
 			sourceTree = "<group>";
 		};
 		5DA1705423067205007C8D92 /* Home */ = {
@@ -319,6 +329,7 @@
 		5DC870B5230654C000E14FAB /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				5D1DE2432307601A00E6BC8E /* QZViews */,
 				5DC870B92306552200E14FAB /* Extensions */,
 				5DC870B6230654C800E14FAB /* Helpers */,
 			);
@@ -633,6 +644,7 @@
 			files = (
 				5DA17078230695C0007C8D92 /* UIView.swift in Sources */,
 				5DC870CE230658E700E14FAB /* Coordinator.swift in Sources */,
+				5D7FB92C230760490041F7AD /* QZGradient.swift in Sources */,
 				5DC870C22306559400E14FAB /* APIManager.swift in Sources */,
 				5DA17063230677AD007C8D92 /* HomeManager.swift in Sources */,
 				5D4E5DBA23069FD100863511 /* ControlView.swift in Sources */,

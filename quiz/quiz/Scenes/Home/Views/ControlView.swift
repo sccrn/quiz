@@ -32,13 +32,11 @@ class ControlView: UIView, NibLoadable {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.addTopBorder()
         setupFromNib()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        self.addTopBorder()
         setupFromNib()
     }
     
