@@ -3,12 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		3C03FC05D529563CE23D6B40 /* Pods_quiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0F2DDC9C8AF06A7BE5545BB /* Pods_quiz.framework */; };
 		40ED5C6A294F006C5617DECD /* Pods_quizTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69500A796847A9A66188FEED /* Pods_quizTests.framework */; };
+		5DA170562306721C007C8D92 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA170552306721C007C8D92 /* HomeController.swift */; };
+		5DA170582306722D007C8D92 /* HomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DA170572306722D007C8D92 /* HomeController.xib */; };
+		5DA1705A23067240007C8D92 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA1705923067240007C8D92 /* HomeViewModel.swift */; };
+		5DA1705C2306726F007C8D92 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA1705B2306726F007C8D92 /* UITableView.swift */; };
+		5DA1705E23067280007C8D92 /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA1705D23067280007C8D92 /* UITableViewCell.swift */; };
+		5DA170602306757F007C8D92 /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA1705F2306757F007C8D92 /* HomeDataSource.swift */; };
+		5DA17063230677AD007C8D92 /* HomeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA17062230677AD007C8D92 /* HomeManager.swift */; };
+		5DA1706623067B56007C8D92 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA1706523067B56007C8D92 /* AppCoordinator.swift */; };
+		5DA1706923067C11007C8D92 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA1706823067C11007C8D92 /* HomeCoordinator.swift */; };
 		5DC870842306544700E14FAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC870832306544700E14FAB /* AppDelegate.swift */; };
 		5DC8708B2306544800E14FAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DC8708A2306544800E14FAB /* Assets.xcassets */; };
 		5DC8708E2306544800E14FAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DC8708C2306544800E14FAB /* LaunchScreen.storyboard */; };
@@ -42,6 +51,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5DA170552306721C007C8D92 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		5DA170572306722D007C8D92 /* HomeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeController.xib; sourceTree = "<group>"; };
+		5DA1705923067240007C8D92 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		5DA1705B2306726F007C8D92 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		5DA1705D23067280007C8D92 /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		5DA1705F2306757F007C8D92 /* HomeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
+		5DA17062230677AD007C8D92 /* HomeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeManager.swift; sourceTree = "<group>"; };
+		5DA1706523067B56007C8D92 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		5DA1706823067C11007C8D92 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		5DC870802306544700E14FAB /* quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DC870832306544700E14FAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DC8708A2306544800E14FAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,8 +137,34 @@
 				D059EF857727DB408A2CAD8A /* Pods-quizUITests.debug.xcconfig */,
 				702F0BE6FDC20C203C16A60A /* Pods-quizUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		5DA1705423067205007C8D92 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5DA170572306722D007C8D92 /* HomeController.xib */,
+				5DA170552306721C007C8D92 /* HomeController.swift */,
+				5DA1705F2306757F007C8D92 /* HomeDataSource.swift */,
+				5DA1705923067240007C8D92 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5DA1706423067B4D007C8D92 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				5DA1706523067B56007C8D92 /* AppCoordinator.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5DA1706723067C02007C8D92 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5DA1706823067C11007C8D92 /* HomeCoordinator.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		5DC870772306544600E14FAB = {
@@ -149,10 +193,10 @@
 			isa = PBXGroup;
 			children = (
 				5DC870CC2306589400E14FAB /* Coordinators */,
-				5DC870C82306562300E14FAB /* Scenes */,
 				5DC870BE2306557400E14FAB /* Services */,
 				5DC870B5230654C000E14FAB /* Utils */,
 				5DC870B3230654AB00E14FAB /* Core */,
+				5DC870C82306562300E14FAB /* Scenes */,
 				5DC870B12306548500E14FAB /* Resources */,
 				5DC8708F2306544800E14FAB /* Info.plist */,
 			);
@@ -239,6 +283,8 @@
 			isa = PBXGroup;
 			children = (
 				5DC870BC2306554400E14FAB /* UIColor.swift */,
+				5DA1705B2306726F007C8D92 /* UITableView.swift */,
+				5DA1705D23067280007C8D92 /* UITableViewCell.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -265,6 +311,7 @@
 			children = (
 				5DC870C4230655C600E14FAB /* API.swift */,
 				5DC870C12306559400E14FAB /* APIManager.swift */,
+				5DA17062230677AD007C8D92 /* HomeManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -273,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				5DC870C92306562600E14FAB /* App */,
+				5DA1705423067205007C8D92 /* Home */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -289,6 +337,8 @@
 			isa = PBXGroup;
 			children = (
 				5DC870CD230658E700E14FAB /* Coordinator.swift */,
+				5DA1706423067B4D007C8D92 /* App */,
+				5DA1706723067C02007C8D92 /* Home */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -402,6 +452,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DC8708E2306544800E14FAB /* LaunchScreen.storyboard in Resources */,
+				5DA170582306722D007C8D92 /* HomeController.xib in Resources */,
 				5DC8708B2306544800E14FAB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -515,11 +566,19 @@
 			files = (
 				5DC870CE230658E700E14FAB /* Coordinator.swift in Sources */,
 				5DC870C22306559400E14FAB /* APIManager.swift in Sources */,
+				5DA17063230677AD007C8D92 /* HomeManager.swift in Sources */,
 				5DC870842306544700E14FAB /* AppDelegate.swift in Sources */,
+				5DA1705A23067240007C8D92 /* HomeViewModel.swift in Sources */,
 				5DC870CB2306563100E14FAB /* BaseController.swift in Sources */,
 				5DC870C7230655FC00E14FAB /* QuizModel.swift in Sources */,
+				5DA170562306721C007C8D92 /* HomeController.swift in Sources */,
+				5DA1705C2306726F007C8D92 /* UITableView.swift in Sources */,
 				5DC870BD2306554400E14FAB /* UIColor.swift in Sources */,
+				5DA1705E23067280007C8D92 /* UITableViewCell.swift in Sources */,
 				5DC870B82306551C00E14FAB /* Constants.swift in Sources */,
+				5DA1706623067B56007C8D92 /* AppCoordinator.swift in Sources */,
+				5DA1706923067C11007C8D92 /* HomeCoordinator.swift in Sources */,
+				5DA170602306757F007C8D92 /* HomeDataSource.swift in Sources */,
 				5DC870C5230655C600E14FAB /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

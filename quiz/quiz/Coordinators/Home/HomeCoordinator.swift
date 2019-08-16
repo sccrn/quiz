@@ -1,0 +1,27 @@
+//
+//  HomeCoordinator.swift
+//  quiz
+//
+//  Created by Samanta Coutinho on 2019-08-16.
+//  Copyright © 2019 Samanta Coutinho. All rights reserved.
+//
+
+import Foundation
+import UIKit
+
+class HomeCoordinator: Coordinator {
+    var childCoordinators: [Coordinator] = []
+    var rootViewController: UIViewController { return navigationController }
+    
+    private lazy var navigationController: UINavigationController = {
+        let navigationControoler = UINavigationController()
+        return navigationControoler
+    }()
+    
+    func start() {
+        let manager = HomeManager()
+        let viewModel = HomeViewModel(homeManager: manager)
+        let homeScreen = HomeController(viewModel: viewModel)
+        navigationController.pushViewController(homeScreen, animated: false)
+    }
+}
