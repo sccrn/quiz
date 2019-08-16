@@ -52,6 +52,10 @@ class HomeViewModel {
     func insertWord(word: String) {
         insertedWords.append(word)
     }
+    
+    func getResult() -> String {
+        return "\(Constants.Messages.timeFiniMessageOne)\(insertedWords.count)\(Constants.Messages.timeFiniMessageTwo)"
+    }
 }
 
 extension HomeViewModel {

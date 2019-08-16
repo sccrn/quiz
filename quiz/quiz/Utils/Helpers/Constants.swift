@@ -21,5 +21,15 @@ struct Constants {
     struct Titles {
         static let reset = "Reset"
         static let start = "Start"
+        static let congratulations = "Congratulations"
+        static let timeFinished = "Time finished"
+        static let tryAgain = "Try again"
+        static let playAgain = "Play again"
+    }
+    
+    struct Messages {
+        static let congratsMessage = "Good job! You found all the answers on time. Keep up with the great work."
+        static let timeFiniMessageOne = "Sorry, time is up! You got "
+        static let timeFiniMessageTwo = " out of 50 answers."
     }
 }

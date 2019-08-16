@@ -13,7 +13,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ControlView" customModule="quiz" customModuleProvider="target">
             <connections>
                 <outlet property="numberOfHits" destination="sko-Av-3LV" id="qQK-G5-3sQ"/>
-                <outlet property="timer" destination="7Jb-HH-gv0" id="5iO-Xv-P2T"/>
+                <outlet property="startResetButton" destination="Dkq-IH-kRw" id="dJe-Lc-dWi"/>
+                <outlet property="timerLabel" destination="7Jb-HH-gv0" id="FWe-Eu-zKe"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
