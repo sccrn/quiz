@@ -8,12 +8,26 @@
 
 import UIKit
 
+protocol TextFieldCellDelegate: class {
+    func didChangeWord(word: String)
+}
+
 class TextFieldCell: UITableViewCell {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var questionTitle: UILabel!
     
-    func configure(question: String) {
+    weak var delegate: TextFieldCellDelegate?
+    
+    func configure(question: String, clearText: Bool, delegate: TextFieldCellDelegate) {
+        self.delegate = delegate
         questionTitle.text = question
+        if clearText { textField.text = "" }
         textField.layer.sublayerTransform = CATransform3DMakeTranslation(15, 0, 0);
+    }
+    
+    @IBAction func insertingNewWord(_ sender: Any) {
+        if let word = textField.text {
+            delegate?.didChangeWord(word: word)
+        }
     }
 }

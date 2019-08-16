@@ -8,6 +8,7 @@
 
 enum HomeState {
     case success
+    case insertedNewWord
     case failed(error: String)
 }
 
@@ -23,10 +24,11 @@ import Foundation
 
 class HomeViewModel {
     private var homeManager: HomeManager
-    private var insertedWords: [String] = []
+    var insertedWords: [String] = []
     private var tableViewList: [HomeTVCell] = []
     private var allWords: [String] = []
     
+    var clearText: Bool = false
     var question: String = ""
     weak var delegate: HomeDelegate?
     
@@ -50,7 +52,12 @@ class HomeViewModel {
     }
     
     func insertWord(word: String) {
-        insertedWords.append(word)
+        if allWords.contains(word) {
+            clearText = true
+            insertedWords.append(word)
+            updateTableView()
+            delegate?.didEndAction(with: .insertedNewWord)
+        }
     }
     
     func getResult() -> String {

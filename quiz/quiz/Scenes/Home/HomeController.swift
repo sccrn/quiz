@@ -63,6 +63,9 @@ extension HomeController: HomeDelegate {
         case .success:
             stopLoading()
             tableView.reloadData()
+        case .insertedNewWord:
+            controlView.insertNewWord(count: viewModel.insertedWords.count)
+            tableView.reloadData()
         case .failed(let error):
             stopLoading()
             showError(message: error)

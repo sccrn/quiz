@@ -26,7 +26,7 @@ extension HomeDataSource: UITableViewDelegate, UITableViewDataSource {
         switch viewModel.typeOfCell(for: indexPath.row) {
         case .textField:
             let cell = tableView.dequeue(cellClass: TextFieldCell.self, indexPath: indexPath)
-            cell.configure(question: viewModel.question)
+            cell.configure(question: viewModel.question, clearText: viewModel.clearText, delegate: self)
             return cell
         case .word:
             let cell = tableView.dequeue(cellClass: WordCell.self, indexPath: indexPath)
@@ -39,5 +39,11 @@ extension HomeDataSource {
     class func setupHomeTableView(tableView: UITableView?) {
         tableView?.registerNib(cellClass: TextFieldCell.self)
         tableView?.registerNib(cellClass: WordCell.self)
+    }
+}
+
+extension HomeDataSource: TextFieldCellDelegate {
+    func didChangeWord(word: String) {
+        viewModel.insertWord(word: word)
     }
 }
