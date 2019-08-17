@@ -22,6 +22,7 @@ class AppCoordinator: Coordinator {
     
     public init(window: UIWindow?) {
         self.window = window
+        self.window?.backgroundColor = .orangeColor
         self.window?.rootViewController = self.rootViewController
         self.window?.makeKeyAndVisible()
     }
