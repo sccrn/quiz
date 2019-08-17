@@ -35,7 +35,7 @@ class HomeTableViewTest: XCTestCase {
         let indexPath = IndexPath(row: 1, section: 0)
         
         guard let cell = dataSource.tableView(tableView, cellForRowAt: indexPath) as? WordCell else {
-            XCTAssert(false, "Expected CurrencyCell class")
+            XCTAssert(false, "Expected WordCell class")
             return
         }
         XCTAssertEqual(cell.wordLabel.text, "test")

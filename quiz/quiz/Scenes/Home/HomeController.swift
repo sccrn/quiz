@@ -18,6 +18,7 @@ class HomeController: BaseController {
         control.translatesAutoresizingMaskIntoConstraints = false
         return control
     }()
+    
     private var viewModel: HomeViewModel
     private var tableViewDataSource: HomeDataSource?
     
@@ -37,7 +38,6 @@ class HomeController: BaseController {
     }
 
     private func loadLayout() {
-        navigationController?.setNavigationBarHidden(true, animated: false)
         viewModel.delegate = self
         showLoading()
         viewModel.fetchQuiz()
@@ -47,6 +47,7 @@ class HomeController: BaseController {
         controlView.addTopBorder()
         controlView.delegate = self
         self.view.addSubview(controlView)
+        
         controlView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
         controlView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
         if #available(iOS 11.0, *) {
@@ -61,6 +62,7 @@ class HomeController: BaseController {
         tableViewDataSource = HomeDataSource(viewModel: viewModel)
         tableView.dataSource = tableViewDataSource
         tableView.delegate = tableViewDataSource
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 140, right: 0)
     }
     
     private func showAlert(message: String, isSuccess: Bool) {

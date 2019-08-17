@@ -15,15 +15,13 @@ class HomeCoordinator: Coordinator {
     
     private lazy var navigationController: UINavigationController = {
         let navigationC = UINavigationController()
-        navigationC.navigationBar.barTintColor = .white
-        navigationC.navigationBar.shadowImage = UIImage()
-        navigationC.navigationBar.isTranslucent = false
         return navigationC
     }()
     
     func start() {
         let viewModel = HomeViewModel(homeManager: HomeManager.shared)
         let homeScreen = HomeController(viewModel: viewModel)
+        navigationController.setNavigationBarHidden(true, animated: false)
         navigationController.pushViewController(homeScreen, animated: false)
     }
 }

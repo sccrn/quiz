@@ -230,13 +230,6 @@
 			path = TextFieldCell;
 			sourceTree = "<group>";
 		};
-		5DA17079230696B4007C8D92 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
 		5DA1707A23069F5F007C8D92 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,7 +298,6 @@
 		5DC870B12306548500E14FAB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				5DA17079230696B4007C8D92 /* Fonts */,
 				5DC870B4230654B600E14FAB /* Storyboards */,
 				5DC870B22306549000E14FAB /* Images */,
 			);
