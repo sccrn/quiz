@@ -8,11 +8,17 @@
 
 import Alamofire
 
-class HomeManager {
+protocol HomeManagerProtocol: class {
+    func fetchJavaChallenge(_ completion:@escaping (Result<QuizModel>) -> Void)
+}
+
+class HomeManager: HomeManagerProtocol {
     private lazy var apiManager: APIManager = {
         let manager = APIManager()
         return manager
     }()
+    
+    static let shared = HomeManager()
     
     func fetchJavaChallenge(_ completion:@escaping (Result<QuizModel>) -> Void) {
         apiManager.createRequest(route: API.home, completion: completion)

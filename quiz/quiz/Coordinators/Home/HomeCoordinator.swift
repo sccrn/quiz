@@ -22,8 +22,7 @@ class HomeCoordinator: Coordinator {
     }()
     
     func start() {
-        let manager = HomeManager()
-        let viewModel = HomeViewModel(homeManager: manager)
+        let viewModel = HomeViewModel(homeManager: HomeManager.shared)
         let homeScreen = HomeController(viewModel: viewModel)
         navigationController.pushViewController(homeScreen, animated: false)
     }

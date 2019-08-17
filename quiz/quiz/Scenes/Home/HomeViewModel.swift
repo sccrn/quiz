@@ -23,21 +23,26 @@ protocol HomeDelegate: class {
 import Foundation
 
 class HomeViewModel {
-    private var homeManager: HomeManager
+    weak var homeManager: HomeManagerProtocol?
     var insertedWords: [String] = []
     private var tableViewList: [HomeTVCell] = []
-    private var allWords: [String] = []
+    var allWords: [String] = []
     
     var isEnabled: Bool = false
     var clearText: Bool = false
     var question: String = ""
     weak var delegate: HomeDelegate?
     
-    init(homeManager: HomeManager) {
+    init(homeManager: HomeManagerProtocol = HomeManager.shared) {
         self.homeManager = homeManager
     }
     
     func fetchQuiz() {
+        guard let homeManager = homeManager else {
+            delegate?.didEndAction(with: .failed(error: "Missing manager"))
+            return
+        }
+        
         homeManager.fetchJavaChallenge { [weak self] result in
             switch result {
             case .success(let quiz):
