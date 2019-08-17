@@ -17,7 +17,7 @@
 		5D7FB92E230769DA0041F7AD /* HomeControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7FB92D230769DA0041F7AD /* HomeControllerUITests.swift */; };
 		5D7FB93223077CF70041F7AD /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7FB93123077CF70041F7AD /* HomeViewModelTests.swift */; };
 		5D7FB93423078E8C0041F7AD /* HomeTableViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7FB93323078E8C0041F7AD /* HomeTableViewTest.swift */; };
-		5D7FB936230793520041F7AD /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7FB935230793520041F7AD /* CoordinatorTests.swift */; };
+		5D7FB936230793520041F7AD /* ControlViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7FB935230793520041F7AD /* ControlViewTests.swift */; };
 		5DA170562306721C007C8D92 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA170552306721C007C8D92 /* HomeController.swift */; };
 		5DA170582306722D007C8D92 /* HomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DA170572306722D007C8D92 /* HomeController.xib */; };
 		5DA1705A23067240007C8D92 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA1705923067240007C8D92 /* HomeViewModel.swift */; };
@@ -71,7 +71,7 @@
 		5D7FB92D230769DA0041F7AD /* HomeControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeControllerUITests.swift; sourceTree = "<group>"; };
 		5D7FB93123077CF70041F7AD /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		5D7FB93323078E8C0041F7AD /* HomeTableViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewTest.swift; sourceTree = "<group>"; };
-		5D7FB935230793520041F7AD /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
+		5D7FB935230793520041F7AD /* ControlViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlViewTests.swift; sourceTree = "<group>"; };
 		5DA170552306721C007C8D92 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		5DA170572306722D007C8D92 /* HomeController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeController.xib; sourceTree = "<group>"; };
 		5DA1705923067240007C8D92 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -286,7 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				5D7FB93123077CF70041F7AD /* HomeViewModelTests.swift */,
-				5D7FB935230793520041F7AD /* CoordinatorTests.swift */,
+				5D7FB935230793520041F7AD /* ControlViewTests.swift */,
 				5D7FB93323078E8C0041F7AD /* HomeTableViewTest.swift */,
 				5DC8709A2306544800E14FAB /* Info.plist */,
 			);
@@ -701,7 +701,7 @@
 			files = (
 				5D7FB93423078E8C0041F7AD /* HomeTableViewTest.swift in Sources */,
 				5D7FB93223077CF70041F7AD /* HomeViewModelTests.swift in Sources */,
-				5D7FB936230793520041F7AD /* CoordinatorTests.swift in Sources */,
+				5D7FB936230793520041F7AD /* ControlViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
